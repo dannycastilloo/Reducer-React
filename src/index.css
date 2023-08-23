@@ -1,0 +1,27 @@
+body {
+  background-color: #333;
+  color: white;
+  font-family: system-ui;
+  padding: 2%;
+  margin: 5%;
+}
+
+h1 {
+  text-align: center;
+  margin: 10%;
+}
+
+.btn {
+  width: 120px;
+  font-size: 18px;
+  margin: 25px;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  border-radius: 10px;
+}
