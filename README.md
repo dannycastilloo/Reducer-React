@@ -1,5 +1,8 @@
-# Description
+## Description
 This is a simple To Do App, which allows the user to create and delete one or all tasks.
+
+## Application
+![image](https://github.com/dannycastilloo/Reducer-React/assets/76531494/0a60c0c7-355f-4a5f-ab3f-30dbdf078fa7)
 
 ## Information
 
