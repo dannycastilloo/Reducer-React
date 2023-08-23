@@ -7,20 +7,11 @@ const initialState = [{
     done: false
 }]
 
-// Centralizar toda la lógica de negocio en un solo lado (reducer)
+// Centralize all business logic on one side (reducer)
 const taskReducer = (state = initialState, action = {}) => {
     switch (action.type) {
         case '[TASKS] Add Task':
             return [...state, action.payload]
-        case '[TASKS] Check Task':
-            return state.map(task => {
-                if (task.id === action.payload) {
-                    return {
-                        ...task,
-                        done: !task.done
-                    }
-                } return task
-            })
         case '[TASKS] Delete Task':
             return state.filter(task => task.id !== action.payload)
         case '[TASKS] Erase Tasks':
@@ -50,14 +41,6 @@ export const TaskList = () => {
         const action = {
             type: '[TASKS] Add Task',
             payload: task
-        }
-        dispatch(action)
-    }
-
-    const checkTask = (id) => {
-        const action = {
-            type: '[TASKS] Check Task',
-            payload: id
         }
         dispatch(action)
     }
@@ -104,9 +87,6 @@ export const TaskList = () => {
                         <li className="list-group-item d-flex justify-content-between" key={item.id}>
                             <span>{item.task}</span>
                             <div>
-                                <input type="checkbox"
-                                    value={item.done}
-                                    onChange={() => checkTask(item)} />
                                 <button className="btn btn-danger"
                                         onClick={() => deleteTask(item)}>
                                     Delete
